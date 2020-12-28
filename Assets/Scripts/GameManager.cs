@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
 
     public float restartDelay = 1f;
 
+    public GameObject completeLevelUI;
+
     public void CompleteLevel() 
     {
 
-        Debug.Log("Level won!");
+        completeLevelUI.SetActive(true);
 
     }
 
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Level_1");//SceneManager.GetActiveScene().name
     }
 
 }
